@@ -19,6 +19,19 @@
 - 关于arcade下载：<https://www.schwarzer.wang/mug#arcade>
 - 关于arcade教程：<https://www.bilibili.com/video/BV177411b7QH>
 
+### 一些机制
+
+- 红色区域仅仅扣血，不扣分
+- 结合剧情？……
+- 变速及铺面效果
+  - timing
+    - 正向，负向，0
+  - timinggroup
+  - nopinput
+  - 特效？
+- 铺面解锁
+  - 达到一定的级别？
+
 ### 其他细节
 
 - 开始界面
@@ -38,9 +51,12 @@
     - 重新开始
     - 继续
     - 返回
+  - 判定
+    - 打击效果
+    - 打击区间
 - 结算界面
   - acc
   - 成绩
   - 返回
   - 看板娘qwq
-- 其他…………
+- 剧情
