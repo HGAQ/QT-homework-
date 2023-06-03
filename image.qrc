@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>image/main.jpg</file>
+        <file>image/guide1.jpg</file>
+        <file>image/guide2.jpg</file>
+        <file>image/guide3.jpg</file>
+        <file>image/map.png</file>
+    </qresource>
+    <qresource prefix="/tower">
+        <file>image/arrow.jpg</file>
+        <file>image/destroy.png</file>
+        <file>image/empty.png</file>
+        <file>image/end.png</file>
+        <file>image/laser.jpg</file>
+        <file>image/mine.png</file>
+        <file>image/wall.png</file>
+    </qresource>
+</RCC>
