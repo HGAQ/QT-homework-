@@ -12,17 +12,20 @@ SOURCES += \
     game.cpp \
     guide1.cpp \
     main.cpp \
-    arkmidnight.cpp
+    arkmidnight.cpp \
+    nextwave.cpp
 
 HEADERS += \
     arkmidnight.h \
     game.h \
-    guide1.h
+    guide1.h \
+    nextwave.h
 
 FORMS += \
     arkmidnight.ui \
     game.ui \
-    guide1.ui
+    guide1.ui \
+    nextwave.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

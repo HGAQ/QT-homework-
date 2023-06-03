@@ -1,7 +1,12 @@
 #include "game.h"
 #include "ui_game.h"
 #include <Qtimer>
-#include <vector>
+#include "nextwave.h"
+
+int game::value = 0;
+int game::sec = 0;
+int game::wave = 0;
+bool game::ifWaveOver = true;
 
 game::game(QWidget *parent) :
     QWidget(parent),
@@ -10,30 +15,12 @@ game::game(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("game");
     tim = new QTimer();
-    tim->setInterval(1000);
+    tim->setInterval(timegap);
+
     connect(tim,SIGNAL(timeout()),this,SLOT(onTimeOut()));
+    connect(tim,SIGNAL(timeout()),this,SLOT(waveInc()));
+
     tim->start();
-    std::vector<std::vector<int>> Mymap = {
-                        {0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0},
-                        {0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
-                        {0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0},
-                        {0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 3},
-                        {0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0},
-                        {2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0},
-                        {0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0},
-                        {0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-                        {0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0},
-    };
-    for(auto line : Mymap)
-    {
-        for(auto position: line)
-        {
-
-        }
-    }
-
-
-
 
 }
 
@@ -44,9 +31,39 @@ game::~game()
 
 void game::onTimeOut()
 {
-    static int value = 0;
-    ui->label_2->setText(QString::number(value++));
+    game::value++;
+    if (game::value / (1000 / timegap) > game::sec) ui->label_2->setText(QString::number(++game::sec));
 
-    if(value > 100)
-        tim->stop();
+    //if(value > 100)
+    //    tim->stop();
 }
+
+void game::putOnWaveNumber(){
+    ui->label_5->setText(QString::number(game::wave));
+}
+
+void game::on_pushButton_clicked()
+{
+    if (game::ifWaveOver){
+        nextWave *w = new nextWave(0);
+        connect(w,&nextWave::SignalInNextWave_WavePutOn,this,&game::putOnWaveNumber);
+        int x = this->pos().x()+180;
+        int y = this->pos().y();
+        w->setWindowModality(Qt::ApplicationModal);
+        w->setWindowTitle("确定吗？");
+        w->move(x, y);
+        w->show();
+    }
+    else{
+        nextWave *w = new nextWave(2);
+        connect(w,&nextWave::SignalInNextWave_WavePutOn,this,&game::putOnWaveNumber);
+        int x = this->pos().x()+180;
+        int y = this->pos().y();
+        w->setWindowModality(Qt::ApplicationModal);
+        w->setWindowTitle("你先别急！");
+        w->move(x, y);
+        w->show();
+    }
+}
+
+

@@ -15,4 +15,7 @@
         <file>image/mine.png</file>
         <file>image/wall.png</file>
     </qresource>
+    <qresource prefix="/setting">
+        <file>image/black_hole.png</file>
+    </qresource>
 </RCC>
