@@ -1,0 +1,10 @@
+debug/block.o
+debug/game.o
+debug/guide1.o
+debug/main.o
+debug/arkmidnight.o
+debug/qrc_image.o
+debug/moc_arkmidnight.o
+debug/moc_block.o
+debug/moc_game.o
+debug/moc_guide1.o

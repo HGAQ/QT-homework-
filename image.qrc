@@ -14,5 +14,6 @@
         <file>image/laser.jpg</file>
         <file>image/mine.png</file>
         <file>image/wall.png</file>
+        <file>image/start.png</file>
     </qresource>
 </RCC>
