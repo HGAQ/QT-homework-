@@ -1,0 +1,64 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>image/map.png</file>
+        <file>image/guide1.png</file>
+        <file>image/guide2.png</file>
+        <file>image/guide3.png</file>
+        <file>image/main.png</file>
+    </qresource>
+    <qresource prefix="/tower">
+        <file>image/destroy.png</file>
+        <file>image/empty.png</file>
+        <file>image/end.png</file>
+        <file>image/mine.png</file>
+        <file>image/wall.png</file>
+        <file>image/start.png</file>
+        <file>image/shield.png</file>
+        <file>image/laser2.png</file>
+        <file>image/arrow.png</file>
+        <file>image/laser.png</file>
+        <file>image/speed.png</file>
+        <file>image/attack.png</file>
+        <file>image/heal.png</file>
+    </qresource>
+    <qresource prefix="/setting">
+        <file>image/banned.png</file>
+        <file>image/bar.png</file>
+        <file>image/back.png</file>
+        <file>image/icon.png</file>
+        <file>image/selected.png</file>
+        <file>image/black_hole.png</file>
+        <file>image/bg_lose.png</file>
+        <file>image/bg_win.png</file>
+    </qresource>
+    <qresource prefix="/monster">
+        <file>image/monsters/mob_explode01.png</file>
+        <file>image/monsters/mob_explode02.png</file>
+        <file>image/monsters/mob_fast01.png</file>
+        <file>image/monsters/mob_fast02.png</file>
+        <file>image/monsters/mob_fly01.png</file>
+        <file>image/monsters/mob_fly02.png</file>
+        <file>image/monsters/mob_fly03.png</file>
+        <file>image/monsters/mob_normal01.png</file>
+        <file>image/monsters/mob_normal02.png</file>
+        <file>image/monsters/mob_sp01.png</file>
+        <file>image/monsters/mob_sp02.png</file>
+        <file>image/monsters/mob_sp03.png</file>
+        <file>image/monsters/mob_heal01.png</file>
+        <file>image/monsters/mob_heal02.png</file>
+        <file>image/monsters/mob_sp04.png</file>
+        <file>image/monsters/mob_sp05.png</file>
+    </qresource>
+    <qresource prefix="/bullet">
+        <file>image/arrowb.png</file>
+        <file>image/laserb.png</file>
+    </qresource>
+    <qresource prefix="/effect">
+        <file>image/is_protected.png</file>
+    </qresource>
+    <qresource prefix="/stage">
+        <file>image/stages/stage_1.png</file>
+        <file>image/stages/stage_2.png</file>
+        <file>image/stages/stage_3.jpg</file>
+    </qresource>
+</RCC>
